@@ -3,6 +3,7 @@ import warnings
 
 from importlib import import_module
 from django.utils.translation import ugettext_lazy as _
+import zinnia.urls
 
 from cms.app_base import CMSApp
 from cms.apphook_pool import apphook_pool
@@ -32,6 +33,6 @@ class ZinniaApphook(CMSApp):
     app_name = 'zinnia'
 
     def get_urls(self, page=None, language=None, **kwargs):
-        return APP_URLS
+        return zinnia.urls.urlpatterns
 
 apphook_pool.register(ZinniaApphook)
