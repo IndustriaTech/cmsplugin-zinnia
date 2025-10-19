@@ -2,7 +2,7 @@
 import warnings
 
 from importlib import import_module
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 import zinnia.urls
 
 from cms.app_base import CMSApp
